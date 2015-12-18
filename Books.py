@@ -4,12 +4,6 @@
 
 #  Student Name: Evan Yacek
 
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
-
 #  Date Created: 11/25/2015
 
 #  Date Last Modified: 11/30/2015
