@@ -2,7 +2,7 @@
 
 #  Description: Compares the vocabulary computationally through comparison of two texts and a dictionary
 
-#  Student Name: Evan Yacek
+#  Evan Yacek
 
 #  Date Created: 11/25/2015
 
