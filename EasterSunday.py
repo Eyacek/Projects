@@ -2,13 +2,7 @@
 
 #  Description: Calculates date of Easter Sunday
 
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
+#  Evan Yacek
 
 #  Date Created: 9/4/2015
 
