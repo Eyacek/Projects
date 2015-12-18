@@ -1,18 +1,3 @@
-#  File: recursion2.py 
-
-#  Description: Practice in typical Recursion problems
-
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
-
-#  Date Created: 11/20/2015
-
-#  Date Last Modified: 11/20/2015
 
 
 # Given an array of ints, is it possible to choose a group of some 
