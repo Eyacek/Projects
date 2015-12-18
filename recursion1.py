@@ -1,18 +1,4 @@
-#  File: recursion1.py 
 
-#  Description: Tutorial program for problems in recursion
-
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
-
-#  Date Created: 11/14/2015
-
-#  Date Last Modified: 11/15/2015
 
 
 # Given n of 1 or more, return the factorial of n, 
