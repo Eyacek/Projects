@@ -2,13 +2,7 @@
  
 #  Description:  Calculates the max cycle length of hailstone sequences in a user defined range. 
  
-#  Student Name: Evan Yacek
- 
-#  Student UT EID: ety78
- 
-#  Course Name: CS 303E
- 
-#  Unique Number: 50475
+#  Evan Yacek
  
 #  Date Created: 9/16/2015
  
