@@ -2,13 +2,7 @@
 
 #  Description: Calculates the Value of PI using random numbers
 
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
+#  Evan Yacek
 
 #  Date Created: 10/1/2015
 
