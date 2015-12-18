@@ -2,21 +2,13 @@
 
 #  Description: finds the max product of four adjacent numbers(Horizontal,Vertical,Diagonals) in a grid
 
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Partner Name:
-
-#  Partner UT EID:
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
+#  Evan Yacek
 
 #  Date Created:10/27/2015
 
 #  Date Last Modified: 10/28/2015
+
+
 
 def main():
   
