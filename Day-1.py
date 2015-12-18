@@ -2,13 +2,7 @@
 
 #  Description: Returns the day of the week when given year, month, and date.
 
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
+#  Evan Yacek
 
 #  Date: 9/12/2015
 
