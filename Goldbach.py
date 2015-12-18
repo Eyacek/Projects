@@ -2,13 +2,7 @@
 
 #  Description: Outputs prime combinations of even numbers in a user defined range. In accordance to Goldbachs Conjecture
 
-#  Student Name: Evan Yacek
-
-#  Student UT EID: ety78
-
-#  Course Name: CS 303E
-
-#  Unique Number: 50475
+#  Evan Yacek
 
 #  Date Created: 9/20/2015
 
