@@ -2,18 +2,14 @@ import random
 
 #  File: Blackjack.py
 #  Description: Command Line BlackJack Simulator
-#  Student's Name: Evan Yacek
-#  Student's UT EID: ety78
-#  Course Name: CS 313E 
-#  Unique Number: 50940
-#
+#  Evan Yacek
 #  Date Created:  2/14/16
 #  Date Last Modified: 2/18/16
 
  
 class Card(object):
-
-    suits = ("C","H","S","D")                            #Define list of class attributes because list index = rank #
+    #Define list of class attributes because list index = rank #
+    suits = ("C","H","S","D")                            
     pips = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
  
     def __init__(self, pip,suit):
@@ -27,8 +23,8 @@ class Card(object):
     
     
   
-   
-class Deck(object):                                     #Create class Deck that has a shuffle, and deal function 
+#Create class Deck that has a shuffle, and deal function 
+class Deck(object):                               
 
     def __init__(self):
         self.deck = [Card(pip,suit) for suit in Card.suits for pip in Card.pips]
@@ -43,15 +39,17 @@ class Deck(object):                                     #Create class Deck that 
         self.shuffle()  
         return self.deck.pop(0)
 
-class Player (object):                                 #Create a class player, Players can hit, get blackjack, and I will keep track of the points here.
+#Create a class Player, Players can hit, get blackjack, and I will keep track of the points here.
+class Player (object):                                 
 
     def __init__ (self, cards):
         self.pcards = cards
 
     def hit (self, card):
         self.pcards.append(card)
-
-    def handTotal (self):                          #Keeps the running total in the Hand
+    
+    #Keeps the running total in the Hand
+    def handTotal (self):                          
         total = 0
         for card in self.pcards:
             if card.pip > 9:
@@ -61,8 +59,8 @@ class Player (object):                                 #Create a class player, P
             else:
                 total += card.pip
 
-    
-        for card in self.pcards:  #This is used to accomodate for when an Ace would bust the user, instead uses a 1
+        #This is used to accomodate for when an Ace would bust the user, instead uses a 1
+        for card in self.pcards:  
             if total <= 21:
                 break
             elif card.pip == 1:
@@ -70,30 +68,31 @@ class Player (object):                                 #Create a class player, P
     
         return total
 
-  
-    def bj (self):                                             #Function that looks at whether or not player has Blackjack
+    #Function that looks at whether or not player has Blackjack
+    def bj (self):  
         return len (self.pcards) == 2 and self.handTotal() == 21
 
   
     def __str__ (self):
-        return ("%s "*len(self.pcards)+"- %d points")%tuple(self.pcards+[self.handTotal()])        #Prints cards and Handtotal
+    	#Prints cards and Handtotal
+        return ("%s "*len(self.pcards)+"- %d points")%tuple(self.pcards+[self.handTotal()])        
 
-
-class Dealer (Player):                           #Created a dealer class that inherits from Player class
+#Created a dealer class that inherits from Player class
+class Dealer (Player):                           
 
 
     def __init__ (self, cards):
         Player.__init__ (self, cards)
         self.dCards = True
 
-  
-    def hit (self, deck):                      #Overloads hit in the Player class allowing cards <17 to be hit and shown
+    #Overloads hit in the Player class allowing cards <17 to be hit and shown
+    def hit (self, deck):                     
         self.dCards = False
         while self.handTotal() < 17:
             self.pcards.append (deck.deal())
 
-  
-    def __str__ (self):                          #Returns one of the Dealers cards
+    #Returns one of the Dealers cards
+    def __str__ (self):                          
         if self.dCards:
             return str(self.pcards[0])
         else:
@@ -101,10 +100,10 @@ class Dealer (Player):                           #Created a dealer class that in
 	  
 class Blackjack (object):
 
-
+    #Create game deck for use, shuffles, and deals
     def __init__ (self, numPlayers):
 	
-        self.gamedeck = Deck()                                                     #Create game deck for use, shuffles, and deals
+        self.gamedeck = Deck()                                                     
         self.gamedeck.shuffle()
         self.numPlayers = numPlayers
         self.Players = []
@@ -119,11 +118,11 @@ class Blackjack (object):
         
         print()
     
-    
-        print ('Player 1 ' + str(self.Players[0])) #Print Players cards
+        #Print Players cards
+        print ('Player 1 ' + str(self.Players[0])) 
 
-    
-        print ('Dealer: ' + str(self.dealer))      #Print dealers cards
+        #Print dealers cards
+        print ('Dealer: ' + str(self.dealer))      
         print()
 
     
@@ -143,14 +142,14 @@ class Blackjack (object):
                     break
         listP1Points.append ((self.Players[i]).handTotal())
 
-    
-        self.dealer.hit (self.gamedeck)              #Dealer needs to hit now if necessary
+        #Dealer needs to hit now if necessary
+        self.dealer.hit (self.gamedeck)              
         dPoints = self.dealer.handTotal()
         print ('Dealer: ' + str(self.dealer))
         print()
     
-    
-        if dPoints > 21:                                             #Determines who wins or loses based on point totals
+        #Determines who wins or loses based on point totals
+        if dPoints > 21:                                             
             print ('Player 1 wins!')
         elif dPoints > listP1Points[0]:
             print ('Player 1 loses!')
@@ -166,19 +165,16 @@ class Blackjack (object):
         else:
             print ('Player 1 loses!')
 		
-if __name__ == '__main__':                         #Main
-    cardDeck = Deck()
-    print("Unshuffled Deck(K=13,Q=12,J=11,A=1)")
-    print(cardDeck)                 
-    cardDeck.shuffle()                           #Shows I can create a proper deck and Shuffle them(K=13,Q=12,J=11,A=1), however 
-    print()                                      #a different deck is used and created in class BlackJack
-    print("Shuffled Deck")
-    print(cardDeck)
+def main(): 
+    #Create Deck
+    cardDeck = Deck() 
+    #Shuffle Deck
+    cardDeck.shuffle()                           
     numPlayers = 1
-    game = Blackjack (numPlayers)                   
+    game = Blackjack (numPlayers) 
+    print("(K=13,Q=12,J=11,A=1)")
     game.play()
 	
     
     
-    
-    
+main()
