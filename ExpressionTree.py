@@ -1,10 +1,6 @@
 #  File: ExpressionTree.py
 #  Description: Computes the value of expression and expresses it in postfix and prefix form 
-#  Student's Name: Evan Yacek
-#  Student's UT EID: ety78
-#  Course Name: CS 313E 
-#  Unique Number: 50940
-#
+#  Name: Evan Yacek
 #  Date Created:  4/27/16
 #  Date Last Modified: 4/29/16
 
