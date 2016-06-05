@@ -9,7 +9,7 @@
 #  Date Last Modified: 11/30/2015
 
 
-word_dict = {}                            #create global var
+word_dict = {}                            
 def create_word_dict ():                  #Creates a dictionary from word list
     dict = open('words.txt', 'r')
     for line in dict:
