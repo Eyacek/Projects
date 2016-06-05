@@ -39,13 +39,13 @@ def main():
 	lo = 100                                     #set Min
 	hi = 100000000                               #ser Max
 
-	print("Computation of PI using Random Numbers", end = '\n\n') #Print the header so that it is left justified and spaced from rest.
+	print("Computation of PI using Random Numbers", end = '\n\n') 
 	
 	while(lo < hi):                              #while loop through range lo-hi
 	
 		dartThrows = lo                          #Set the value of the dart throws
 		pi = computePI(dartThrows)               # compute value of pi
-		print("num = %d \t Calculated PI = %f   Difference = %+f" %(dartThrows, pi, pi - math.pi)) #%d holds the spot for the num integer, \t tabs, %f holds the spot for a float decimal, the plus is added for positive values
+		print("num = %d \t Calculated PI = %f   Difference = %+f" %(dartThrows, pi, pi - math.pi)) 
 		lo = 10*lo                               # lo will increase by a factor of 10
 	
 	print( '\n',"Difference = Calculated PI - math.pi", sep = '') #\n to space, and sep = '' here will left justify
