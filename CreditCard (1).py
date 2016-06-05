@@ -12,7 +12,8 @@
 
 def is_valid(creditNumber):                                  #Determines if Credit Card is Valid using Luhn's Test
     num = [int(val) for val in str(creditNumber)][::-1]      #[::1] will reverse the order here
-    return (sum(num[0::2]) + sum(sum(divmod(x*2,10)) for x in num[1::2])) % 10 == 0 #divmod here splits two numbers so we can complete our summing of the odds
+    return (sum(num[0::2]) + sum(sum(divmod(x*2,10)) for x in num[1::2])) % 10 == 0 #divmod here splits two numbers so we can 
+ 											#complete our summing of the odds
     
 
 
